@@ -15,11 +15,6 @@ class _Login_Screen_2State extends State<Login_Screen_2> {
   TextEditingController passwordController = TextEditingController();
 
   bool isObscured = false;
-  bool contactVisible1 = false;
-  String name1 = '';
-  String phone1 = '';
-  bool contactVisible2 = false;
-  bool contactVisible3 = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,15 +27,11 @@ class _Login_Screen_2State extends State<Login_Screen_2> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Visibility(
-              visible: contactVisible1,
-              child:  LoginDefaultField(
-                hintText: "Enter your email",
-                myController: emailController,
-                type: TextInputType.emailAddress,
-                obscureText: false,
-              ),
-
+            LoginDefaultField(
+              hintText: "Enter your email",
+              myController: emailController,
+              type: TextInputType.emailAddress,
+              obscureText: false,
             ),
             SizedBox(height: 20,),
             LoginDefaultField(
@@ -61,8 +52,7 @@ class _Login_Screen_2State extends State<Login_Screen_2> {
             SizedBox(height: 40,),
             ElevatedButton(
                 onPressed: (){
-                  contactVisible1 = true;
-                  setState((){});
+
                 },
                 child: Text("Sign In",style: TextStyle(fontSize: 30),))
 
