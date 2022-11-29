@@ -52,7 +52,7 @@ class _Login_Screen_2State extends State<Login_Screen_2> {
             SizedBox(height: 40,),
             ElevatedButton(
                 onPressed: (){
-
+                  Navigator.pushNamed(context, HomeScreen_2.routename , arguments: HomeScreenArguments(emailController.text, passwordController.text));
                 },
                 child: Text("Sign In",style: TextStyle(fontSize: 30),))
 
